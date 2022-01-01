@@ -62,4 +62,4 @@ python3 Decrypt.py --CCM
 
 # Download Binary
 
-[Ubuntu20.04]() 
+[Ubuntu20.04](https://github.com/AlexTrinityBlock/AES-GCM-CCM-FileEncryptor/raw/master/download/AES-GCM-CCM-FileEncryptor-Ubuntu20.04.zip) 
