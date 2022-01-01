@@ -56,6 +56,9 @@ python3 Decrypt.py --GCM
 python3 Decrypt.py --CCM
 ```
 
+![img](img/1.png)
+![img](img/2.png)
+
 # Download Source file
 
 [DownloadSourceFIle](https://github.com/AlexTrinityBlock/AES-GCM-CCM-FileEncryptor/archive/refs/heads/master.zip)
