@@ -67,11 +67,11 @@ def decrptFromBase64toStringCCM(ciphertextBase64:bytes, key):
     plaintext:bytes = cipher.decrypt_and_verify(jv['ciphertext'], jv['tag'])
     return plaintext.decode("utf-8")
 
-def AESGCMFileEncrypt(encryptFilePath:str,cipherFilePath:str,key:bytes):
-    writeFileBytes(Base64StringToBytes(AESEncrypt(bytesToBase64String(readFileBytes(encryptFilePath)),key,"GCM")),cipherFilePath)
+def AESFileEncrypt(encryptFilePath:str,cipherFilePath:str,key:bytes,mode:str="GCM"):
+    writeFileBytes(Base64StringToBytes(AESEncrypt(bytesToBase64String(readFileBytes(encryptFilePath)),key,mode)),cipherFilePath)
 
-def AESGCMFileDecrypt(cipherFilePath:str,decryptFilePath:str,key:bytes):
-    writeFileBytes(Base64StringToBytes(AESDecrypt(bytesToBase64String(readFileBytes(cipherFilePath)),key,"GCM")),decryptFilePath)
+def AESFileDecrypt(cipherFilePath:str,decryptFilePath:str,key:bytes,mode:str="GCM"):
+    writeFileBytes(Base64StringToBytes(AESDecrypt(bytesToBase64String(readFileBytes(cipherFilePath)),key,mode)),decryptFilePath)
 
 def AESEncrypt(plainTextString:str, key:bytes,mode="GCM"):
     if mode=="CCM":

@@ -6,7 +6,7 @@ from util.CryptUtil import *
 aesKey=bytes()
 
 root= tk.Tk()
-root.title("AES-GCM-CCM-FileEncryptor")
+root.title("AES-GCM-CCM-FileDecryptor")
 
 #Parameter
 parser = argparse.ArgumentParser("python3 client.py")
@@ -40,5 +40,5 @@ page1.create_window(200, 100, window=setSecretBtn)
 root.mainloop()
 
 #Page 2
-encryptFilePath = filedialog.askopenfilename(title='Select file')
-AESFileEncrypt(encryptFilePath,encryptFilePath+".cipher",aesKey,AES_MODE)
+cipherFilePath = filedialog.askopenfilename(title='Select cipher file')
+AESFileDecrypt(cipherFilePath,cipherFilePath.replace(".cipher",""),aesKey,AES_MODE)
