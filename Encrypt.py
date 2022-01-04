@@ -2,10 +2,11 @@ import tkinter as tk
 import argparse
 from tkinter import filedialog
 from util.CryptUtil import *
+from sys import exit
 
 aesKey=bytes()
-
 root= tk.Tk()
+root.protocol("WM_DELETE_WINDOW",exit)
 root.title("AES-GCM-CCM-FileEncryptor")
 
 #Parameter
